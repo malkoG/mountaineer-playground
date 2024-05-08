@@ -1,0 +1,31 @@
+
+
+
+[tool.poetry]
+name = "mountaineer_playground"
+version = "0.1.0"
+description = ""
+authors = ["malkoG <rijgndqw012@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+mountaineer = "^0.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+runserver = "mountaineer_playground.cli:runserver"
+watch = "mountaineer_playground.cli:watch"
+build = "mountaineer_playground.cli:build"
+createdb = "mountaineer_playground.cli:createdb"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+
+
